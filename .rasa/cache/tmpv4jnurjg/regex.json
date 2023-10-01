@@ -1,0 +1,6 @@
+[
+  {
+    "name": "programming_lenguage",
+    "pattern": "(\\bC\\+\\+\\b|\\bPython\\b|\\bJava\\b|\\bJavaScript\\b|\\bC\\#\\b|\\bPascal\\b|\\bKotlin\\b|\\bPHP\\b|\\bR\\b|\\bObjetive\\-C\\b|\\bSwift\\b|\\bMatLab\\b|\\bTypeScript\\b|\\bGo\\b|\\bRust\\b)"
+  }
+]

@@ -1,0 +1,45 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_great
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: ask info about a library
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_library_info
+  - action: action_library_info
+  - intent: thank
+  - action: utter_your_welcome
+  - action: utter_goodbye
+
+- story: ask possible libraries
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_possible_libraries
+    entities:
+    - programming_lenguage: Java
+  - slot_was_set:
+    - programming_lenguage: Java
+  - action: action_inform_libraries
+  - intent: thank
+  - action: utter_your_welcome
+  - action: utter_something_else
+  - intent: deny
+  - action: utter_goodbye

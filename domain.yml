@@ -1,0 +1,86 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+  - ask_possible_libraries
+  - ask_library_info
+  - thank
+
+responses:
+  utter_greet:
+  - text: "Hola {name}! En que puedo ayudarte?"
+  - text: "Hola, estoy acá para lo que necesites."
+  - text: "Que tal? Decime en que puedo ayudarte!"
+
+  utter_goodbye:
+  - text: "Hasta Pronto!"
+  - text: "Adios!"
+  - text: "Nos vemos"
+
+  utter_great:
+  - text: "Buenisimo."
+
+  utter_your_welcome:
+  - text: "Un placer ayudarte."
+  - text: "Por nada!"
+
+  utter_something_else:
+  - text: "Necesitas algo más?"
+
+  utter_library_info:
+  - text: "Por supuesto puedo ayudarte con la library {library}."
+  - text: "Te puedo dar algo de info sobre {library}."
+
+  utter_prueba_library:
+  - text: "Una posible libreria de {programming_lenguage} es libreriaN."
+
+  utter_iamabot:
+  - text: "Soy un chatbot impulsado por Rasa."
+
+entities:
+  - name
+  - programming_lenguage
+  - activity  # Data Science, Machine Learning, Web, etc.
+  - library
+
+slots:
+  name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: name
+
+  programming_lenguage:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: programming_lenguage
+
+  activity:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: activity
+
+  library:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: library
+
+actions:
+- utter_greet
+- utter_prueba_library
+- utter_something_else
+- utter_your_welcome
+- utter_goodbye
+- action_inform_libraries
+- action_library_info
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

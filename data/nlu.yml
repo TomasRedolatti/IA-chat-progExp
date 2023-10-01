@@ -1,0 +1,100 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - Hola, mi nombre es [Pedro]{"entity": "name"}
+    - Hola, me llamo [Tomas]{"entity":"name"}
+    - Hola
+    - ey
+    - que tal
+    - que onda
+    - como va
+    - buenas
+    
+- intent: goodbye
+  examples: |
+    - adios
+    - nos vemos luego
+    - hasta pronto
+    - chau
+    - buenas noches
+    - que tengas un buen dia
+    - nos vemos
+    - chua chau
+
+- intent: affirm
+  examples: |
+    - si
+    - s
+    - de acuerdo
+    - por supuesto
+    - eso suena bien
+    - correcto
+    - exactamente
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - nunca
+    - no me parece
+    - no lo creo
+    - de ninguna manera
+    - no en realidad
+    - no concuerdo
+    - imposible
+    - nada
+
+- intent: ask_possible_libraries
+  examples: |
+    - Estoy haciendo un proyecto de [data science]{"entity":"activity"} con [python]{"entity":"programming_lenguage"} y no conozco librerias.
+    - Estoy programando en [Java](programming_lenguage) y quiero conocer librerias.
+    - Quiero hacer un programa de [Machine Learning]{"entity":"activity"}, me indicas posibleslibrerias?
+    - Conoces librerias de [c++]{"entity":"programming_lenguage"}?
+    - Que librerias son mas usadas para [desarrollo web]{"entity":"activity"}
+
+- intent: ask_library_info
+  examples: |
+    - Necesito ayuda con una libreria.
+    - ¿Puedes ayudarme con una libreria?
+    - Quiero saber mas sobre la libreria [numpy]{"entity": "library"}
+    - Esoy buscando informacion sobre una libreria.
+    - Me interesa sabermas sobre la libreria [pandas]{"entity": "library"}
+    - Para que sirve la libreria [jquery]{"entity": "library"}
+    - Para que puedo usar la libreria [plotly]{"entity":"library"} de [python]{"entity":"programming_lenguage"}
+    - Necesito ayuda con una libreria de [java]{"entity":"programming_lenguage"}
+
+- lookup: programming_lenguage
+  examples: |
+    - C++
+    - Python
+    - Java
+    - JavaScript
+    - C#
+    - Pascal
+    - Kotlin
+    - PHP
+    - R
+    - Objetive-C
+    - Swift
+    - MatLab
+    - TypeScript
+    - Go
+    - Rust
+
+- intent: thank
+  examples: |
+    - Gracias!
+    - Buenisimo, me sirvio la información.
+    - Muchas gracias por la ayuda
+
+- intent: bot_challenge
+  examples: |
+    - sos un robot?
+    - sos un humano?
+    - sos una persona?
+    - estoy hablando con un robot?
+    - estoy hablando con un bot?
+    - estoy hablando con un humano?
+    - estoy hablando con una persona?

@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-activity",
+      "2": "I-activity",
+      "3": "L-activity",
+      "4": "U-activity",
+      "5": "B-library",
+      "6": "I-library",
+      "7": "L-library",
+      "8": "U-library",
+      "9": "B-name",
+      "10": "I-name",
+      "11": "L-name",
+      "12": "U-name",
+      "13": "B-programming_lenguage",
+      "14": "I-programming_lenguage",
+      "15": "L-programming_lenguage",
+      "16": "U-programming_lenguage",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-activity": 1,
+      "I-activity": 2,
+      "L-activity": 3,
+      "U-activity": 4,
+      "B-library": 5,
+      "I-library": 6,
+      "L-library": 7,
+      "U-library": 8,
+      "B-name": 9,
+      "I-name": 10,
+      "L-name": 11,
+      "U-name": 12,
+      "B-programming_lenguage": 13,
+      "I-programming_lenguage": 14,
+      "L-programming_lenguage": 15,
+      "U-programming_lenguage": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]
