@@ -22,19 +22,29 @@ class ActionLibraryInfo(Action):
 			domain: DomainDict) -> Coroutine[Any, Any, List[Dict[Text, Any]]]:
 		prolog = Prolog()
 		prolog.consult('/home/tomas/Documentos/materias-actuales/programacion_exploratoria/proyectos/trabajo-practico/librerias.pl')
-		lenguage = next(tracker.get_latest_entity_values("programming_lenguage"), None)
+		library = next(tracker.get_latest_entity_values("library"), None)
 
-		dispatcher.utter_message(text=lenguage)
-
-		if not lenguage:
-			msg = f"Para poder ayudarte, decime sobre que libreria necesitas información."
-			dispatcher.utter_message(text=msg)
+		if not library:
+			msg1 = f"Para poder ayudarte, decime sobre que libreria necesitas información."
+			dispatcher.utter_message(text=msg1)
 			return []
 
-		result = bool(list(prolog.query("libreria(" + lenguage +")")))
-		if result:
-			msg = f"Claro puedo ayudarte con la libreria {'lenguage'}."
-			dispatcher.utter_message(text=msg)
+
+		result = bool(list(prolog.query(f"libreria( {library}, _, _, _)")))
+
+		if result:   #Si se encuentra la libreria en la BD
+			msg2 = f"Claro puedo ayudarte con la libreria {library}."
+			dispatcher.utter_message(text=msg2)
+
+			for description in prolog.query("libreria("+ library +", L, U, D)"):
+				rta = f"{description['D']}"
+				dispatcher.utter_message(text=rta)
+
+			return []
+		else:		
+			msg3 = f"Los siento, no tengo información sobre la libreria {library}."
+			dispatcher.utter_message(text=msg3)
+
 			return []
 	
 		return []
