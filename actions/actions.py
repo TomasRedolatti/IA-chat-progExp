@@ -49,3 +49,17 @@ class ActionLibraryInfo(Action):
 	
 		return []
 
+class ActionInformLibraries(Action):
+
+	def name(self) -> Text:
+		return "action_inform_libraries"
+	
+	def run(self, dispatcher: CollectingDispatcher, 
+		 tracker: Tracker, 
+		 domain: DomainDict) -> Coroutine[Any, Any, List[Dict[Text, Any]]]:
+		
+		prolog = Prolog()
+		prolog.consult('/home/tomas/Documentos/materias-actuales/programacion_exploratoria/proyectos/trabajo-practico/librerias.pl')
+		language = next(tracker.get_latest_entity_values("programming_language"), None)
+
+		return []

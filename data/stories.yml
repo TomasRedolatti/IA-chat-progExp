@@ -34,12 +34,23 @@ stories:
   - action: utter_greet
   - intent: ask_possible_libraries
     entities:
-    - programming_lenguage: Java
+    - programming_language: Java
   - slot_was_set:
-    - programming_lenguage: Java
+    - programming_language: Java
   - action: action_inform_libraries
   - intent: thank
   - action: utter_your_welcome
   - action: utter_something_else
   - intent: deny
   - action: utter_goodbye
+
+- story: path3
+  steps:
+  - intent: ask_possible_libraries
+    entities:
+    - programming_language: Python
+  - slot_was_set:
+    - programming_language: Python
+  - action: action_inform_libraries
+  - intent: ask_library_info
+  - action: action_library_info

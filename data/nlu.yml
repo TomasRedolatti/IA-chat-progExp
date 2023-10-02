@@ -48,10 +48,10 @@ nlu:
 
 - intent: ask_possible_libraries
   examples: |
-    - Estoy haciendo un proyecto de [data science]{"entity":"activity"} con [python]{"entity":"programming_lenguage"} y no conozco librerias.
-    - Estoy programando en [Java](programming_lenguage) y quiero conocer librerias.
+    - Estoy haciendo un proyecto de [data science]{"entity":"activity"} con [python]{"entity":"programming_language"} y no conozco librerias.
+    - Estoy programando en [Java](programming_language) y quiero conocer librerias.
     - Quiero hacer un programa de [Machine Learning]{"entity":"activity"}, me indicas posibleslibrerias?
-    - Conoces librerias de [c++]{"entity":"programming_lenguage"}?
+    - Conoces librerias de [c++]{"entity":"programming_language"}?
     - Que librerias son mas usadas para [desarrollo web]{"entity":"activity"}
 
 - intent: ask_library_info
@@ -62,10 +62,10 @@ nlu:
     - Esoy buscando informacion sobre una libreria.
     - Me interesa sabermas sobre la libreria [pandas]{"entity": "library"}
     - Para que sirve la libreria [jquery]{"entity": "library"}
-    - Para que puedo usar la libreria [plotly]{"entity":"library"} de [python]{"entity":"programming_lenguage"}
-    - Necesito ayuda con una libreria de [java]{"entity":"programming_lenguage"}
+    - Para que puedo usar la libreria [plotly]{"entity":"library"} de [python]{"entity":"programming_language"}
+    - Necesito ayuda con una libreria de [java]{"entity":"programming_language"}
 
-- lookup: programming_lenguage
+- lookup: programming_language
   examples: |
     - C++
     - Python

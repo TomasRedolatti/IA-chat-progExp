@@ -36,14 +36,14 @@ responses:
   - text: "Te puedo dar algo de info sobre {library}."
 
   utter_prueba_library:
-  - text: "Una posible libreria de {programming_lenguage} es libreriaN."
+  - text: "Una posible libreria de {programming_language} es libreriaN."
 
   utter_iamabot:
   - text: "Soy un chatbot impulsado por Rasa."
 
 entities:
   - name
-  - programming_lenguage
+  - programming_language
   - activity  # Data Science, Machine Learning, Web, etc.
   - library
 
@@ -54,11 +54,11 @@ slots:
     - type: from_entity
       entity: name
 
-  programming_lenguage:
+  programming_language:
     type: text
     mappings:
     - type: from_entity
-      entity: programming_lenguage
+      entity: programming_language
 
   activity:
     type: text
