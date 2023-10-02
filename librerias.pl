@@ -22,6 +22,8 @@ libreria('scikit learn', 'python', 'machine learning',
 los cuales están máquinas de vectores de soporte, bosques aleatorios, Gradient 
 boosting, K-means y DBSCAN.').
 
+libreria('jquery').
+
 % -------------------------------------------------------------------------------
 
 % Predicado para obtener librerias dado el Lenguaje

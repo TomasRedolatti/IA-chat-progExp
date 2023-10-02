@@ -82,6 +82,21 @@ nlu:
     - TypeScript
     - Go
     - Rust
+  
+- lookup: name
+  examples: |
+    - Tomas
+    - Juan
+    - Federico
+    - Bautista
+    - Josefina
+    - Agustina
+    - Felicitas
+    - Nahuel
+    - Javier
+    - Marcela
+    - Victoria
+    - vicky
 
 - intent: thank
   examples: |
